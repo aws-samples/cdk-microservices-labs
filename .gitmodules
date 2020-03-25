@@ -4,3 +4,6 @@
 [submodule "2-ecs-microservice-stack/spring-petclinic-microservices"]
 	path = 2-ecs-microservice-stack/spring-petclinic-microservices
 	url = https://github.com/spring-petclinic/spring-petclinic-microservices.git
+[submodule "5-serverless-graphql-stack/spring-petclinic-graphql"]
+	path = 5-serverless-graphql-stack/spring-petclinic-graphql
+	url = https://github.com/spring-petclinic/spring-petclinic-graphql
