@@ -1,0 +1,10 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "version": "2018-05-29",
+    "statements": [
+        "INSERT INTO visits VALUES(NULL, $ctx.args.input.petId, '$ctx.args.input.date', '$ctx.args.input.description')",
+        "SELECT visits.id, pet_id, visit_date date, description, pets.name pet_name, pets.birth_date pet_birthDate, pets.owner_id,pets.type_id,owners.first_name owner_firstName,owners.last_name owner_lastName,owners.address owner_address,owners.city owner_city,owners.telephone owner_telephone,types.name type_name FROM visits,pets,owners,types WHERE visits.pet_id=pets.id AND pets.owner_id=owners.id AND pets.type_id=types.id AND visits.id=LAST_INSERT_ID()"
+    ]
+}

@@ -1,0 +1,8 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "statements": [
+        "select a.*, b.name, b.id from vet_specialties a, specialties b where a.specialty_id=b.id"
+    ]
+}

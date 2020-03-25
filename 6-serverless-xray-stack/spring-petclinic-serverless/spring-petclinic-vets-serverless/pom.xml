@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.springframework.samples.petclinic.vets</groupId>
+	<artifactId>spring-petclinic-vets-serverless</artifactId>
+	<packaging>jar</packaging>
+	<description>Spring PetClinic Vets Serverless</description>
+
+	<parent>
+		<groupId>org.springframework.samples</groupId>
+		<artifactId>spring-petclinic-serverless</artifactId>
+		<version>2.0.7</version>
+	</parent>
+
+	<dependencies>
+        <!-- Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+        
+        <!-- DynamoDB Spring Support -->
+        <dependency>
+            <groupId>com.github.derjust</groupId>
+            <artifactId>spring-data-dynamodb</artifactId>
+            <version>5.0.4</version>
+        </dependency>
+
+        <!-- X-Ray for Spring -->
+        <dependency>
+            <groupId>com.github.derjust</groupId>
+            <artifactId>spring-data-dynamodb</artifactId>
+            <version>5.0.4</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>com.amazonaws</groupId>
+                    <artifactId>aws-java-sdk-core</artifactId>
+                </exclusion>
+            </exclusions> 
+        </dependency>
+
+        <!-- X-Ray for Spring -->
+        <dependency> 
+             <groupId>com.amazonaws</groupId> 
+             <artifactId>aws-xray-recorder-sdk-core</artifactId> 
+             <version>2.3.0</version> 
+        </dependency>
+        <dependency>
+             <groupId>com.amazonaws</groupId>
+             <artifactId>aws-xray-recorder-sdk-aws-sdk</artifactId>
+             <version>2.3.0</version>
+        </dependency>
+        <dependency>
+             <groupId>com.amazonaws</groupId>
+             <artifactId>aws-xray-recorder-sdk-aws-sdk-instrumentor</artifactId>
+             <version>2.3.0</version>
+        </dependency>
+
+        <!-- Third parties-->
+        <dependency>
+            <groupId>org.jolokia</groupId>
+            <artifactId>jolokia-core</artifactId>
+        </dependency>
+        <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+	</dependencies>
+
+    <build>
+        <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+      </plugins>
+    </build>
+</project>

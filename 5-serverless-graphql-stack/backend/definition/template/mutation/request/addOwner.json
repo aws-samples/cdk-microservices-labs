@@ -1,0 +1,7 @@
+{
+    "version": "2018-05-29",
+    "statements": [
+        "INSERT INTO owners VALUES (NULL, '$ctx.args.input.firstName', '$ctx.args.input.lastName', '$ctx.args.input.address', '$ctx.args.input.city', '$ctx.args.input.telephone')",
+        "SELECT id, first_name firstName, last_name lastName, address, city, telephone FROM owners WHERE id = LAST_INSERT_ID()"
+    ]
+}

@@ -1,0 +1,8 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "statements": [
+        "select visits.id, visits.visit_date date, visits.description, visits.pet_id from visits,pets,owners where visits.pet_id=pets.id and pets.owner_id = owners.id and owners.id = $ctx.args.id"
+    ]
+}

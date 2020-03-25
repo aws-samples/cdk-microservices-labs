@@ -1,0 +1,7 @@
+.env/
+cdk.out/
+cdk.context.json
+*/__pycache__/
+.DS_Store
+*/.DS_Store/
+*/target/

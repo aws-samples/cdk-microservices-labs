@@ -1,0 +1,10 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "version": "2018-05-29",
+    "statements": [
+        "UPDATE specialties SET name='$ctx.args.input.name' WHERE id=$ctx.args.input.specialtyId",
+        "SELECT * FROM specialties WHERE id=$ctx.args.input.specialtyId"
+    ]
+}

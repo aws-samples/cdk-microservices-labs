@@ -1,0 +1,19 @@
+## Raise a GraphQL field error in case of a datasource invocation error
+#if($ctx.error)
+    $utils.error($ctx.error.message, $ctx.error.type)
+#end
+#set($owner=$ctx.prev.result)
+#set($visits=$utils.rds.toJsonObject($ctx.result)[0])
+#set($pets=[])
+#foreach( $pet in $owner.pets )
+  #set($out=[])
+  #foreach( $visit in $visits )
+    #if($pet.id == $visit.pet_id)
+      $util.qr($out.add($visit))
+    #end
+  #end
+  $util.qr($pet.put("visits", {"visits":$out,"totalCount":$out.size()}))
+  $util.qr($pets.add($pet))
+#end
+$util.qr($owner.put("pets", $pets))
+$utils.toJson($owner)

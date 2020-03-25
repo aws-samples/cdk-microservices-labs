@@ -1,0 +1,27 @@
+## Raise a GraphQL field error in case of a datasource invocation error
+#if($ctx.error)
+    $utils.error($ctx.error.message, $ctx.error.type)
+#end
+#set($pet={})
+#set($owner={})
+#set($type={})
+#set($output={})
+#set($origin=$utils.rds.toJsonObject($ctx.result)[1][0])
+
+#foreach($key in $origin.keySet())
+  #if($key.startsWith("pet_"))
+     $util.qr($pet.put($key.replace("pet_",""), $origin.get($key)))
+  #elseif($key.startsWith("owner_"))
+     $util.qr($owner.put($key.replace("owner_",""),$origin.get($key)))
+  #elseif($key.startsWith("type_"))
+     $util.qr($type.put($key.replace("type_",""),$origin.get($key)))
+  #else
+     $util.qr($output.put($key, $origin.get($key)))
+  #end
+#end
+
+$util.qr($pet.put("owner", $owner))
+$util.qr($pet.put("type",$type))
+$util.qr($output.put("pet", $pet))
+
+$utils.toJson({"visit": $output})

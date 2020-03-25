@@ -1,0 +1,9 @@
+aws_cdk.core
+aws_cdk.aws_ec2
+aws_cdk.aws_ecs
+aws_cdk.aws_cloudformation
+aws_cdk.aws_lambda
+aws_cdk.aws_s3
+aws_cdk.aws_s3_deployment
+aws_cdk.aws_dynamodb
+aws_cdk.aws_elasticloadbalancingv2

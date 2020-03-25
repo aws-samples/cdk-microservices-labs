@@ -1,0 +1,10 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "version": "2018-05-29",
+    "statements": [
+        "SELECT * FROM specialties WHERE id = $ctx.args.input.specialtyId",
+        "DELETE FROM specialties WHERE id = $ctx.args.input.specialtyId"
+    ]
+}

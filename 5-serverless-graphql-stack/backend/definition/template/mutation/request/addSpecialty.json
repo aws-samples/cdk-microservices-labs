@@ -1,0 +1,10 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "version": "2018-05-29",
+    "statements": [
+        "INSERT INTO specialties VALUES(NULL, '$ctx.args.input.name')",
+        "SELECT * FROM specialties WHERE id=LAST_INSERT_ID()"
+    ]
+}

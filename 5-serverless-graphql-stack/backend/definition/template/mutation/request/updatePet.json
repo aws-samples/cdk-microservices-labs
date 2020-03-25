@@ -1,0 +1,10 @@
+#**
+  Select statement for a relational database data source
+*#
+{
+    "version": "2018-05-29",
+    "statements": [
+        "UPDATE pets SET type_id=$ctx.args.input.typeId, name='$ctx.args.input.name', birth_date='$ctx.args.input.birthDate' WHERE id=$ctx.args.input.petId",
+        "SELECT pets.id,pets.name,pets.birth_date birthDate,owner_id,type_id,owners.first_name owner_firstName, owners.last_name owner_lastName,owners.address owner_address,owners.city owner_city,owners.telephone owner_telephone, types.name type_name FROM types,owners,pets WHERE pets.type_id=types.id and pets.owner_id=owners.id and pets.id=$ctx.args.input.petId"
+    ]
+}

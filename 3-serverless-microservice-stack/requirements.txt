@@ -1,0 +1,10 @@
+aws_cdk.core
+aws_cdk.aws_apigateway
+aws_cdk.aws_lambda
+aws_cdk.aws_s3
+aws_cdk.aws_s3_deployment
+aws_cdk.aws_dynamodb
+aws-cdk.aws_cloudformation
+aws-cdk.aws_lambda_event_sources
+aws-cdk.aws_events
+aws-cdk.aws_events_targets

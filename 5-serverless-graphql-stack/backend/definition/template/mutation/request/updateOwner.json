@@ -1,0 +1,7 @@
+{
+    "version": "2018-05-29",
+    "statements": [
+        "update owners set first_name='$ctx.args.input.firstName', last_name='$ctx.args.input.lastName', address='$ctx.args.input.address', city='$ctx.args.input.city', telephone='$ctx.args.input.telephone' WHERE id=$ctx.args.input.ownerId",
+        "SELECT id, first_name firstName, last_name lastName, address, city, telephone FROM owners WHERE id = $ctx.args.input.ownerId"
+    ]
+}

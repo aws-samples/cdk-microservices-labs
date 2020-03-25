@@ -1,0 +1,125 @@
+{
+  "test_vet": [
+    {
+      "PutRequest": {
+        "Item": {
+          "lastName": {
+            "S": "Stevens"
+          },
+          "specialties": {
+            "SS": [
+              "radiology"
+            ]
+          },
+          "id": {
+            "S": "0ec63e17-e2f8-4bb2-9a40-4b4352b6f4ed"
+          },
+          "firstName": {
+            "S": "Henry"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "lastName": {
+            "S": "Douglas"
+          },
+          "specialties": {
+            "SS": [
+              "dentistry",
+              "surgery"
+            ]
+          },
+          "id": {
+            "S": "37076cc2-2018-493b-9aff-ff7706f9240a"
+          },
+          "firstName": {
+            "S": "Linda"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "lastName": {
+            "S": "Jenkins"
+          },
+          "specialties": {
+            "SS": [
+              "surgery"
+            ]
+          },
+          "id": {
+            "S": "bf31d794-804b-411d-a0da-0c79e0896c52"
+          },
+          "firstName": {
+            "S": "Sharon"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "lastName": {
+            "S": "Ortega"
+          },
+          "specialties": {
+            "SS": [
+              "surgery"
+            ]
+          },
+          "id": {
+            "S": "eb3b54a0-bba4-4fe9-bfa8-441c41d9370f"
+          },
+          "firstName": {
+            "S": "Rafael"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "lastName": {
+            "S": "Carter"
+          },
+          "specialties": {
+            "SS": [
+              "dentistry"
+            ]
+          },
+          "id": {
+            "S": "8c502bf6-28ee-4015-808f-ef6245481f27"
+          },
+          "firstName": {
+            "S": "James"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "lastName": {
+            "S": "Leary"
+          },
+          "specialties": {
+            "SS": [
+              "radiology"
+            ]
+          },
+          "id": {
+            "S": "04a3cac9-bc4a-4811-baf1-efaa94965b11"
+          },
+          "firstName": {
+            "S": "Helen"
+          }
+        }
+      }
+    }
+  ]
+}

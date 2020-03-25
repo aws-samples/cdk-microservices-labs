@@ -1,0 +1,22 @@
+## Raise a GraphQL field error in case of a datasource invocation error
+#if($ctx.error)
+    $utils.error($ctx.error.message, $ctx.error.type)
+#end
+#set($vets=$ctx.prev.result)
+#set($vetSpecs=$utils.rds.toJsonObject($ctx.result)[0])
+#set($output=[])
+
+#foreach($vet in $vets)
+   #set($specOut=[])
+   #foreach( $vetSpec in $vetSpecs )
+      #if($vet.id==$vetSpec.vet_id)
+         $util.qr($specOut.add($vetSpec))
+      #end
+   #end
+   ##if($specOut.size()>0)
+      $util.qr($vet.put("specialties", $specOut))
+   ##end
+   $util.qr($output.add($vet))
+#end
+
+$utils.toJson($output)

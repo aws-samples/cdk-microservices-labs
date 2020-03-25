@@ -1,0 +1,519 @@
+{
+  "test_owner": [
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Madison"
+          },
+          "firstName": {
+            "S": "David"
+          },
+          "lastName": {
+            "S": "Schroeder"
+          },
+          "telephone": {
+            "S": "6085559435"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "bird"
+                  },
+                  "name": {
+                    "S": "Freddy"
+                  },
+                  "birthDate": {
+                    "S": "2000-03-09T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "2749 Blackhawk Trail"
+          },
+          "id": {
+            "S": "b877e940-f473-45f7-9bb7-f8717ae81fe4"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Monona"
+          },
+          "firstName": {
+            "S": "Jeff"
+          },
+          "lastName": {
+            "S": "Black"
+          },
+          "telephone": {
+            "S": "6085555387"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "bird"
+                  },
+                  "name": {
+                    "S": "Lucky"
+                  },
+                  "birthDate": {
+                    "S": "1999-08-06T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "1450 Oak Blvd."
+          },
+          "id": {
+            "S": "aa313782-7755-4302-b82b-8418702695ef"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Madison"
+          },
+          "firstName": {
+            "S": "George"
+          },
+          "lastName": {
+            "S": "Franklin"
+          },
+          "telephone": {
+            "S": "6085551023"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "cat"
+                  },
+                  "name": {
+                    "S": "Leo"
+                  },
+                  "birthDate": {
+                    "S": "2000-09-07T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "110 W. Liberty St."
+          },
+          "id": {
+            "S": "e76a7cd1-9120-4a20-9cb5-560e13741341"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Madison"
+          },
+          "firstName": {
+            "S": "Maria"
+          },
+          "lastName": {
+            "S": "Escobito"
+          },
+          "telephone": {
+            "S": "6085557683"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "dog"
+                  },
+                  "name": {
+                    "S": "Mulligan"
+                  },
+                  "birthDate": {
+                    "S": "1997-02-24T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "345 Maple St."
+          },
+          "id": {
+            "S": "c403fc06-af5e-46a3-b0f7-a63a4361d034"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Windsor"
+          },
+          "firstName": {
+            "S": "Harold"
+          },
+          "lastName": {
+            "S": "Davis"
+          },
+          "telephone": {
+            "S": "6085553198"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "lizard"
+                  },
+                  "name": {
+                    "S": "Iggy"
+                  },
+                  "birthDate": {
+                    "S": "2000-11-30T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "563 Friendly St."
+          },
+          "id": {
+            "S": "9e11ce75-a1a7-4cb8-b077-e1f60963e01d"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Waunakee"
+          },
+          "firstName": {
+            "S": "Greg"
+          },
+          "lastName": {
+            "S": "Huang"
+          },
+          "telephone": {
+            "S": "6085555487"
+          },
+          "pets": {
+            "L": []
+          },
+          "address": {
+            "S": "2335 Independence La."
+          },
+          "id": {
+            "S": "d8f7efe5-7f1d-4970-bf5c-dc1686023457"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Sun Prairie"
+          },
+          "firstName": {
+            "S": "Betty"
+          },
+          "lastName": {
+            "S": "Davis"
+          },
+          "telephone": {
+            "S": "6085551749"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "hamster"
+                  },
+                  "name": {
+                    "S": "Basil"
+                  },
+                  "birthDate": {
+                    "S": "2002-08-06T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "638 Cardinal Ave."
+          },
+          "id": {
+            "S": "ef5aace9-f32e-4d88-b967-ded99a686e60"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "McFarland"
+          },
+          "firstName": {
+            "S": "Eduardo"
+          },
+          "lastName": {
+            "S": "Rodriquez"
+          },
+          "telephone": {
+            "S": "6085558763"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "dog"
+                  },
+                  "name": {
+                    "S": "Rosy"
+                  },
+                  "birthDate": {
+                    "S": "2001-04-17T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "type": {
+                    "S": "dog"
+                  },
+                  "name": {
+                    "S": "Jewel"
+                  },
+                  "birthDate": {
+                    "S": "2000-03-07T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "2693 Commerce St."
+          },
+          "id": {
+            "S": "8de26a5c-60fc-4801-a23b-429a838895e1"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Madison"
+          },
+          "firstName": {
+            "S": "Peter"
+          },
+          "lastName": {
+            "S": "McTavish"
+          },
+          "telephone": {
+            "S": "6085552765"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "snake"
+                  },
+                  "name": {
+                    "S": "George"
+                  },
+                  "birthDate": {
+                    "S": "2000-01-20T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "2387 S. Fair Way"
+          },
+          "id": {
+            "S": "178fe46b-065c-454d-8127-c8d08b4b9ad6"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Monona"
+          },
+          "firstName": {
+            "S": "Jean"
+          },
+          "lastName": {
+            "S": "Coleman"
+          },
+          "telephone": {
+            "S": "6085552654"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "cat"
+                  },
+                  "name": {
+                    "S": "Samantha"
+                  },
+                  "birthDate": {
+                    "S": "1995-09-04T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "type": {
+                    "S": "cat"
+                  },
+                  "name": {
+                    "S": "Max"
+                  },
+                  "birthDate": {
+                    "S": "1995-09-04T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "105 N. Lake St."
+          },
+          "id": {
+            "S": "3f369b95-d6d9-410c-8c3c-249e38e29af8"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "city": {
+            "S": "Waunakee"
+          },
+          "firstName": {
+            "S": "Carlos"
+          },
+          "lastName": {
+            "S": "Estaban"
+          },
+          "telephone": {
+            "S": "6085555487"
+          },
+          "pets": {
+            "L": [
+              {
+                "M": {
+                  "type": {
+                    "S": "dog"
+                  },
+                  "name": {
+                    "S": "Lucky"
+                  },
+                  "birthDate": {
+                    "S": "2000-06-24T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "type": {
+                    "S": "cat"
+                  },
+                  "name": {
+                    "S": "Sly"
+                  },
+                  "birthDate": {
+                    "S": "2002-06-08T00:00:00.000Z"
+                  },
+                  "id": {
+                    "N": "0"
+                  }
+                }
+              }
+            ]
+          },
+          "address": {
+            "S": "2335 Independence La."
+          },
+          "id": {
+            "S": "96af3c13-2b1e-40e4-8c99-3de5155a7f1e"
+          }
+        }
+      }
+    }
+  ]
+}
