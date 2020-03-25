@@ -58,5 +58,5 @@ sudo yum remove -y java-1.7.0-openjdk && sudo yum install -y java-1.8.0-openjdk-
 ```
 6. Connect to Cloud9 terminal and Git clone this project, please note we must use `--recurse-submodules` flag to download all other third parties codes:
 ```bash
-git clone --recurse-submodules http://git.awsrun.com/grhuang/cdk-microservices-lab
+git clone --recurse-submodules https://github.com/aws-samples/cdk-microservices-labs.git
 ```
