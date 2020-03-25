@@ -1,0 +1,4 @@
+[submodule "1-ecs-monolith-stack/spring-petclinic"]
+	path = 1-ecs-monolith-stack/spring-petclinic
+	url = https://github.com/spring-projects/spring-petclinic
+	branch = e280d12144
