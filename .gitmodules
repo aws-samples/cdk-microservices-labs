@@ -1,3 +1,6 @@
 [submodule "1-ecs-monolith-stack/spring-petclinic"]
 	path = 1-ecs-monolith-stack/spring-petclinic
 	url = https://github.com/spring-projects/spring-petclinic
+[submodule "2-ecs-microservice-stack/spring-petclinic-microservices"]
+	path = 2-ecs-microservice-stack/spring-petclinic-microservices
+	url = https://github.com/spring-petclinic/spring-petclinic-microservices.git
