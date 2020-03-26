@@ -31,11 +31,24 @@ pip install -r requirements.txt
 At this point you can now synthesize the CloudFormation template for this code.
 
 ```bash
-$ cdk synth
+cdk synth
 ```
 
 After review the CloudFormation template you can upload all the Lambda Function JARs, static files and deploy all the Infracture codes using:
 
 ```bash
-$ cdk deploy
+cdk deploy
+```
+
+Check the Spring Petclinic Application deployment is success by browse the CDK output AWS ELB url like:
+
+```bash
+serverless-stack.PetclinicApiGatewayWithCorsEndpoint122A21C4 = https://gw5lflv1q3.execute-api.ap-northeast-1.amazonaws.com/prod/
+serverless-stack.PetclinicWebsiteUrl = http://serverless-stack-petclinicwebsitebcda6fa7-yo4jhabxfujm.s3-website-ap-northeast-1.amazonaws.com
+```
+
+Finally you can clean up the whole stack by using:
+
+```bash
+cdk destory
 ```

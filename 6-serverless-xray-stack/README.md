@@ -79,3 +79,11 @@ Subsegment:
 Analytics:
 
 ![](images/8.png)
+
+## Cleanup the AWS Resources
+
+Finally you can clean up the whole stack by using:
+
+```bash
+cdk destroy
+```

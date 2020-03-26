@@ -63,7 +63,7 @@ class EcsMonolithStack(core.Stack):
             service_name='spring-petclinic',
             desired_count= 2,
             task_image_options = {
-              "image": ecs.ContainerImage.from_ecr_repository(asset.repository),
+              "image": ecs.ContainerImage.from_docker_image_asset(asset),
               "container_name": 'spring-petclinic',
               "container_port": 8080,
               "environment":  {

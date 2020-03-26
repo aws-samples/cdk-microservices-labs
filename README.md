@@ -30,7 +30,7 @@ You can run this Lab in any Linux or Mac OS system. You will need to have the la
 3. [Installing Docker](https://docs.docker.com/engine/installation/)
 4. [Installing Python](https://www.python.org/downloads/)
 5. [Installing JQ](https://stedolan.github.io/jq/download/)
-6. [Installing CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+6. [Installing CDK Python Version](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html#python)
 
 ### Setup Lab Environment on AWS Cloud9
 

@@ -1,5 +1,5 @@
-aws_cdk.core
-aws_cdk.aws_ec2
-aws_cdk.aws_ecs
-aws_cdk.aws_rds
-aws_cdk.aws_ecs_patterns
+aws_cdk.core==1.27.0
+aws_cdk.aws_ec2==1.27.0
+aws_cdk.aws_ecs==1.27.0
+aws_cdk.aws_rds==1.27.0
+aws_cdk.aws_ecs_patterns==1.27.0

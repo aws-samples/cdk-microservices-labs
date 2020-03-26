@@ -60,3 +60,9 @@ cdk deploy
 ```
 
 When the command run completed you can open the new deploy Web static page to login in the GrapshQL version Pet Clinic Application.
+
+Finally you can clean up the whole stack by using:
+
+```bash
+cdk destroy
+```

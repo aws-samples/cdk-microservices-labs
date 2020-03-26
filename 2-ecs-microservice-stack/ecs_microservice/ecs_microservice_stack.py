@@ -85,7 +85,7 @@ class EcsMicroserviceStack(core.Stack):
             ecs_container = ecs_task.add_container(
 				'Container-' + s,
 				memory_limit_mib=512,
-				image=ecs.ContainerImage.from_ecr_repository(asset.repository),
+				image=ecs.ContainerImage.from_docker_image_asset(asset),
 				logging=ecs.LogDriver.aws_logs(stream_prefix=s),
 				environment=env
 			)
@@ -102,11 +102,11 @@ class EcsMicroserviceStack(core.Stack):
             
             if s == 'static':
                 parttern = '/*'
-                priority = 110
+                priority = 1100
                 check={'path': '/'}
             else:
                 parttern = '/api/' + s.rstrip('s') + '/*'
-                priority = randint(1, 100)
+                priority = randint(1, 1000)
                 check={'path': '/api/' + s.rstrip('s') + '/manage'}
 
             target = listener.add_targets(

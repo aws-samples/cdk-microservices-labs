@@ -149,7 +149,7 @@ class FagateServerlessStack(core.Stack):
 
             ecs_container = ecs_task.add_container(
                 'Container-' + s,
-                image=ContainerImage.from_ecr_repository(asset.repository),
+                image=ContainerImage.from_docker_image_asset(asset),
                 logging=LogDriver.aws_logs(stream_prefix=s),
                 environment=env
             )
@@ -209,5 +209,6 @@ class FagateServerlessStack(core.Stack):
             }
         )
         
+        core.CfnOutput(self,"FagateALBUrl",export_name="FagateALBUrl",value=alb.load_balancer_dns_name)
         core.CfnOutput(self,"FagatePetclinicWebsiteUrl",export_name="FagatePetclinicWebsiteUrl",value=website_bucket.bucket_website_url)
 
