@@ -1,6 +1,0 @@
-org/springframework/samples/petclinic/vets/VetsServiceApplication.class
-org/springframework/samples/petclinic/vets/web/VetResource.class
-org/springframework/samples/petclinic/vets/common/DynamoDBConfig.class
-org/springframework/samples/petclinic/vets/model/VetRepository.class
-org/springframework/samples/petclinic/vets/model/Vet.class
-org/springframework/samples/petclinic/vets/StreamLambdaHandler.class

@@ -1,5 +1,0 @@
-/home/ec2-user/environment/cdk-microservices-labs/6-serverless-xray-stack/spring-petclinic-serverless/spring-petclinic-vets-serverless/src/main/java/org/springframework/samples/petclinic/vets/model/VetRepository.java
-/home/ec2-user/environment/cdk-microservices-labs/6-serverless-xray-stack/spring-petclinic-serverless/spring-petclinic-vets-serverless/src/main/java/org/springframework/samples/petclinic/vets/model/Vet.java
-/home/ec2-user/environment/cdk-microservices-labs/6-serverless-xray-stack/spring-petclinic-serverless/spring-petclinic-vets-serverless/src/main/java/org/springframework/samples/petclinic/vets/web/VetResource.java
-/home/ec2-user/environment/cdk-microservices-labs/6-serverless-xray-stack/spring-petclinic-serverless/spring-petclinic-vets-serverless/src/main/java/org/springframework/samples/petclinic/vets/common/DynamoDBConfig.java
-/home/ec2-user/environment/cdk-microservices-labs/6-serverless-xray-stack/spring-petclinic-serverless/spring-petclinic-vets-serverless/src/main/java/org/springframework/samples/petclinic/vets/VetsServiceApplication.java

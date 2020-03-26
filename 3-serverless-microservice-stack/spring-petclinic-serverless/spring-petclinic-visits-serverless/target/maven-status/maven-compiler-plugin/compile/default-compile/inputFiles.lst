@@ -1,6 +1,0 @@
-/home/ec2-user/environment/cdk-microservices-labs/3-serverless-microservice-stack/spring-petclinic-serverless/spring-petclinic-visits-serverless/src/main/java/org/springframework/samples/petclinic/visits/model/Visit.java
-/home/ec2-user/environment/cdk-microservices-labs/3-serverless-microservice-stack/spring-petclinic-serverless/spring-petclinic-visits-serverless/src/main/java/org/springframework/samples/petclinic/visits/StreamLambdaHandler.java
-/home/ec2-user/environment/cdk-microservices-labs/3-serverless-microservice-stack/spring-petclinic-serverless/spring-petclinic-visits-serverless/src/main/java/org/springframework/samples/petclinic/visits/model/VisitRepository.java
-/home/ec2-user/environment/cdk-microservices-labs/3-serverless-microservice-stack/spring-petclinic-serverless/spring-petclinic-visits-serverless/src/main/java/org/springframework/samples/petclinic/visits/VisitsServiceApplication.java
-/home/ec2-user/environment/cdk-microservices-labs/3-serverless-microservice-stack/spring-petclinic-serverless/spring-petclinic-visits-serverless/src/main/java/org/springframework/samples/petclinic/visits/web/VisitResource.java
-/home/ec2-user/environment/cdk-microservices-labs/3-serverless-microservice-stack/spring-petclinic-serverless/spring-petclinic-visits-serverless/src/main/java/org/springframework/samples/petclinic/visits/common/DynamoDBConfig.java

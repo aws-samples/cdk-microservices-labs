@@ -1,5 +1,0 @@
-org/springframework/samples/petclinic/visits/web/VisitResource.class
-org/springframework/samples/petclinic/visits/model/Visit.class
-org/springframework/samples/petclinic/visits/common/DynamoDBConfig.class
-org/springframework/samples/petclinic/visits/VisitsServiceApplication.class
-org/springframework/samples/petclinic/visits/model/VisitRepository.class
