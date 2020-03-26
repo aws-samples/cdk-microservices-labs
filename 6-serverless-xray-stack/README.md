@@ -14,32 +14,32 @@ cd spring-petclinic-serverless && ./mvnw package
 We also need manually create a virtualenv on MacOS and Linux in this project root folder:
 
 ```bash
-$ cd ../ && python3 -m venv .env
+cd ../ && python3 -m venv .env
 ```
 
 After the init process completes and the virtualenv is created, you can use the following
 step to activate your virtualenv.
 
 ```bash
-$ source .env/bin/activate
+source .env/bin/activate
 ```
 
 Once the virtualenv is activated, you can install the required dependencies.
 
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 At this point you can now synthesize the CloudFormation template for this code.
 
 ```bash
-$ cdk synth
+cdk synth
 ```
 
 After review the CloudFormation template you can create the Docker Image which will upload to ECR Repo and deploy all the Infracture codes using:
 
 ```bash
-$ cdk deploy
+cdk deploy
 ```
 
 ## Have a Tutorial with X-Ray
