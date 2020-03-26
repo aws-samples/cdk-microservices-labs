@@ -1,4 +1,9 @@
 ## Introduction
+
+## Hugo Style Workshop Documents
+
+If you want more detail workshop describion documents pelase visit [this site](http://cloudnative-immersion-day.s3-website-ap-northeast-1.amazonaws.com/)
+
 ### Microservices Deployed Using Cloud Development Kit
 
 This repository contains the Lab of Microservices Deployed on ECS using [AWS Cloud Development Kit](https://github.com/awslabs/aws-cdk).
