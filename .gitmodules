@@ -6,4 +6,4 @@
 	url = https://github.com/spring-petclinic/spring-petclinic-microservices.git
 [submodule "6-serverless-graphql-stack/spring-petclinic-graphql"]
 	path = 6-serverless-graphql-stack/spring-petclinic-graphql
-	url = https://github.com/spring-petclinic/spring-petclinic-graphql
+	url = https://github.com/spring-petclinic/spring-petclinic-graphql.git
