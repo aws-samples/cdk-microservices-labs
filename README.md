@@ -21,9 +21,9 @@ So lets get to it,
 
 4. [Part Four: Build CI/CD Pipeline for Serverless Projects](4-serverless-cicd-stack)
 
-5. [Part Five: GraphQL for data driven application development](5-serverless-graphql-stack)
+5. [Part Five: Microservice Tracing & Monitoring](5-serverless-xray-stack)
 
-6. [Part Six: Microservice Tracing & Monitoring](6-serverless-xray-stack)
+6. [Part Six: GraphQL for data driven application development](6-serverless-graphql-stack)
 
 
 ## Prerequisites
