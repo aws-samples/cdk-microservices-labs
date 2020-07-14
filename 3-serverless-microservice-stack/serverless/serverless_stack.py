@@ -83,12 +83,11 @@ class ServerlessStack(core.Stack):
                 memory_size=1024,
                 timeout=core.Duration.seconds(300),
                 initial_policy=lambda_policies,
-                environment={"DYNAMODB_TABLE_NAME":table.table_name, "SERVER_SERVLET_CONTEXT_PATH":"/api/" + service},
-                current_version_options=_lambda.VersionOptions(provisioned_concurrent_executions=5) #Added for warm the Java Lambda
+                environment={"DYNAMODB_TABLE_NAME":table.table_name, "SERVER_SERVLET_CONTEXT_PATH":"/api/" + service}
             )
-        
+            base_version = base_lambda.add_version(name='v1', provisioned_executions=1)  #Added for warm the Java Lambda
             entity = api_resource.add_resource(service)
-            entity.add_proxy(default_integration=_apigw.LambdaIntegration(base_lambda))
+            entity.add_proxy(default_integration=_apigw.LambdaIntegration(base_version))
             self.add_cors_options(entity)
             
         resource = _cfn.CustomResource(self, "S3ModifyCustomResource",
