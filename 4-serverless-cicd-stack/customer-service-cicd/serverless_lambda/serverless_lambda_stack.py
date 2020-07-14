@@ -75,7 +75,8 @@ class ServerlessLambdaStack(core.Stack):
 
         alias = _lambda.Alias(self, 'ApiPetclinicCusomterLambdaAlias',
           alias_name='Prod',
-          version=version
+          version=version,
+          provisioned_concurrent_executions=1
         )
 
         _deploy.LambdaDeploymentGroup(self, 'ApiPetclinicCusomterDeploymentGroup',

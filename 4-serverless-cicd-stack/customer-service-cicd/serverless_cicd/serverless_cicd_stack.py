@@ -63,8 +63,7 @@ class ServerlessCicdStack(core.Stack):
                         'nodejs': '10'
                      },
                     'commands':[
-                      'npm install -g aws-cdk@1.10.0',
-                      'pip install aws-cdk.core==1.10.0',
+                      'npm install -g aws-cdk',
                       'pip install -r requirements.txt'
                     ]
                   },

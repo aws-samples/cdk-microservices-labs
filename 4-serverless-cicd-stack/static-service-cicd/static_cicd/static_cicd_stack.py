@@ -5,7 +5,6 @@ from aws_cdk import (
 	aws_codepipeline_actions as _action,
     aws_apigateway as _apigw,
     aws_s3_deployment as _s3deploy,
-    aws_events as _events,
 	aws_lambda as _lambda,
     aws_s3 as _s3,
 	core
@@ -29,11 +28,6 @@ class StaticCicdStack(core.Stack):
             website_index_document='index.html',
             public_read_access=True,
             removal_policy=core.RemovalPolicy.DESTROY
-        )
-        
-        # Warm Lambda function Event rule
-        event_rule = _events.Rule(self, 'PetclinicLambdaWarmRule',
-            schedule=_events.Schedule.rate(core.Duration.minutes(3))
         )
 
         code = _commit.Repository(self, 'ServerlessCode',
@@ -95,7 +89,6 @@ class StaticCicdStack(core.Stack):
                          )]
                     }]
             )
-        core.CfnOutput(self, 'RuleArn', export_name='RuleArn', value=event_rule.rule_arn)
         core.CfnOutput(self, 'PetclinicApiGatewayWithCorsId', export_name='PetclinicApiGatewayWithCorsId', value=base_api.rest_api_id)
         core.CfnOutput(self, "PetclinicWebsiteUrl",export_name="PetclinicWebsiteUrl",value=website_bucket.bucket_website_url)
 
