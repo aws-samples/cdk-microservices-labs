@@ -4,7 +4,6 @@ from aws_cdk import (
 	aws_apigateway as _apigw,
 	aws_lambda as _lambda,
 	aws_s3_deployment as _s3deploy,
-	aws_lambda_event_sources as _events,
 	aws_iam as iam,
 	aws_cloudformation as _cfn,
 	aws_events as _event,
@@ -67,11 +66,6 @@ class ServerlessStack(core.Stack):
         
         dynamodb_tables = []
         
-        # Warm Lambda function Event rule
-        event_rule = _event.Rule(self, 'PetclinicLambdaWarmRule',
-            schedule=_event.Schedule.rate(core.Duration.minutes(3))
-        )
-        
         for service in ['customer', 'vet', 'visit']:
             table = _dynamodb.Table(self, service.capitalize() + 'Table',
               partition_key={ 'name': 'id', 'type': _dynamodb.AttributeType.STRING },
@@ -89,13 +83,13 @@ class ServerlessStack(core.Stack):
                 memory_size=1024,
                 timeout=core.Duration.seconds(300),
                 initial_policy=lambda_policies,
-                environment={"DYNAMODB_TABLE_NAME":table.table_name, "SERVER_SERVLET_CONTEXT_PATH":"/api/" + service}
+                environment={"DYNAMODB_TABLE_NAME":table.table_name, "SERVER_SERVLET_CONTEXT_PATH":"/api/" + service},
+                current_version_options=_lambda.VersionOptions(provisioned_concurrent_executions=5) #Added for warm the Java Lambda
             )
         
             entity = api_resource.add_resource(service)
             entity.add_proxy(default_integration=_apigw.LambdaIntegration(base_lambda))
             self.add_cors_options(entity)
-            event_rule.add_target(_target.LambdaFunction(handler=base_lambda))
             
         resource = _cfn.CustomResource(self, "S3ModifyCustomResource",
             provider=_cfn.CustomResourceProvider.lambda_(
