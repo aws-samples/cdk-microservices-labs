@@ -27,6 +27,7 @@ class EcsMonolithStack(core.Stack):
         
         rdsInst = rds.DatabaseInstance(self, 'SpringPetclinicDB',
           engine=rds.DatabaseInstanceEngine.MYSQL,
+          engine_version='5.7.31',
           instance_class=ec2.InstanceType('t2.medium'),
           master_username = 'master',
           database_name = 'petclinic',
