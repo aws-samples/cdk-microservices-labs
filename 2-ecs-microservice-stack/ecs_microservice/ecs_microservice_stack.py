@@ -79,7 +79,7 @@ class EcsMicroserviceStack(core.Stack):
                   'SPRING_DATASOURCE_PASSWORD': 'Welcome#123456',
                   'SPRING_DATASOURCE_USERNAME': 'master',
                   'SPRING_PROFILES_ACTIVE': 'mysql',
-                  'SPRING_DATASOURCE_URL': 'jdbc:mysql://' + rdsInst.db_instance_endpoint_address + '/petclinic?useUnicode=true',
+                  'SPRING_DATASOURCE_URL': 'jdbc:mysql://' + rdsInst.db_instance_endpoint_address + '/petclinic?useUnicode=true&enabledTLSProtocols=TLSv1.2',
                   'SERVER_SERVLET_CONTEXT_PATH': '/api/' + s.rstrip('s')
                 }
 
