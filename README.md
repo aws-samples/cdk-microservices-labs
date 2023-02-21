@@ -41,25 +41,33 @@ You can run this Lab in any Linux or Mac OS system. You will need to have the la
 
 You can reference [this Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-cdk.html) to setup your Cloud9 quickly setup your development environment. To complete this Lab you need some other steps:
 
-1. Update your OS:
-```bash
-sudo yum update -y
-```
-2. Install AWS CDK:
-```bash
-npm install -g aws-cdk
-```
-3. Confirm the CDK version:
+1. Confirm the CDK version:
 ```bash
 cdk --version
 ```
-4. Setup default python using version 3:
+If CDK is not installed use the following command to install it:
 ```bash
-sudo update-alternatives --config python
+npm install -g aws-cdk
 ```
-5. Upgrade OpenJDK from version 7 to 8:
+2. Confirm the Java version:
 ```bash
-sudo yum remove -y java-1.7.0-openjdk && sudo yum install -y java-1.8.0-openjdk-devel
+java -version
+```
+3. Confirm the Python version:
+```bash
+python --version
+```
+4. Confirm that git is installed:
+```bash
+python --version
+```
+5. Confirm that git-commit-remote is installed. The below command should return a path to git-remote-codecommit:
+```bash
+which git-remote-codecommit
+```
+If git-remote-codecommit is not instalalled use the following command to install it:
+```bash
+pip install git-remote-codecommit
 ```
 6. Connect to Cloud9 terminal and Git clone this project, please note we must use `--recurse-submodules` flag to download all other third parties codes:
 ```bash
