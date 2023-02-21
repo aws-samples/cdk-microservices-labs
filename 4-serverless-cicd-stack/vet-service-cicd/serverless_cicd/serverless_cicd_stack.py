@@ -28,7 +28,7 @@ class ServerlessCicdStack(core.Stack):
 	        'phases': {
 	          'install': {
 	            'runtime-versions': {
-	               'java': 'openjdk8'
+	               'java': 'corretto8'
 	            },
 	            'commands': []
 	          },
@@ -50,7 +50,7 @@ class ServerlessCicdStack(core.Stack):
 	        },
 	      }),
 	      environment=_build.BuildEnvironment(
-	      	build_image=_build.LinuxBuildImage.STANDARD_2_0)
+	      	build_image=_build.LinuxBuildImage.STANDARD_5_0)
 	    )
 
         cdk_project = _build.PipelineProject(self, 'VetCdkBuild',
@@ -59,8 +59,8 @@ class ServerlessCicdStack(core.Stack):
                'phases': {
                   'install': {
                      'runtime-versions':{
-                        'python': '3.7',
-                        'nodejs': '10'
+                        'python': '3.9',
+                        'nodejs': '14'
                      },
                     'commands':[
                       'npm install -g aws-cdk',
@@ -88,7 +88,7 @@ class ServerlessCicdStack(core.Stack):
                 }
 	    	}),
             environment=_build.BuildEnvironment(
-            	build_image=_build.LinuxBuildImage.STANDARD_2_0
+            	build_image=_build.LinuxBuildImage.STANDARD_5_0
             )
 	    )
 
