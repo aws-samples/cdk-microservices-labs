@@ -27,16 +27,17 @@ class EcsMicroserviceStack(core.Stack):
 
         
         rdsInst = rds.DatabaseInstance(self, 'SpringPetclinicDB',
-          engine=rds.DatabaseInstanceEngine.MYSQL,
-          engine_version='5.7.31',
-          instance_class=ec2.InstanceType('t2.medium'),
-          master_username = 'master',
+          engine=rds.DatabaseInstanceEngine.mysql(version=rds.MysqlEngineVersion.of(mysql_full_version='5.7.40',mysql_major_version='5.7')),
+          instance_type=ec2.InstanceType('t2.medium'),
           database_name = 'petclinic',
-          master_user_password = core.SecretValue('Welcome#123456'),
+          credentials=rds.Credentials.from_username(
+             username= 'master',
+            password=core.SecretValue('Welcome#123456')
+          ),
           vpc = vpc,
           deletion_protection = False,
           backup_retention = core.Duration.days(0),
-          removal_policy = core.RemovalPolicy.DESTROY,
+          #removal_policy = RemovalPolicy.DESTROY,
           #vpc_placement = ec2.SubnetSelection(subnet_type=ec2.SubnetType.PUBLIC)
           )
 
